@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userFormFragment">
+
+    <fragment
+        android:id="@+id/userFormFragment"
+        android:name="com.example.navcomponent.UserFormFragment"
+        android:label="UserForm"
+        tools:layout="@layout/fragment_user_form" >
+        <action
+            android:id="@+id/action_userFormFragment_to_userPreviewFragment"
+            app:destination="@id/userPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userPreviewFragment"
+        android:name="com.example.navcomponent.UserPreviewFragment"
+        android:label="UserPreview"
+        tools:layout="@layout/fragment_user_preview">
+        <argument
+            android:name="userName"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
